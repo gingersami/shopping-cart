@@ -1,3 +1,6 @@
+var source = $('#shopping-template').html();
+var template = Handlebars.compile(source);
+
 // an array with all of our cart items
 var cart = [];
 
@@ -19,6 +22,7 @@ var clearCart = function () {
 
 $('.view-cart').on('click', function () {
   // TODO: hide/show the shopping cart!
+  $('view-cart').toggleClass('shopping-cart')
 });
 
 $('.add-to-cart').on('click', function () {
